@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.*;
+
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -14,5 +16,15 @@ public class GlobalExceptionHandler {
     public R error(Exception e) {
         e.printStackTrace();
         return R.error().message("执行了全局异常处理..");
+    }
+
+    public static void main(String[] args) {
+        Set<String> set = new HashSet<>();
+        set.add("ag");
+        set.add("bh");
+        set.add("hc");
+        set.add("hd");
+        set.add("eg");
+        set.forEach(System.out::println);
     }
 }
