@@ -19,12 +19,5 @@ public class GlobalExceptionHandler {
     }
 
     public static void main(String[] args) {
-        Set<String> set = new HashSet<>();
-        set.add("ag");
-        set.add("bh");
-        set.add("hc");
-        set.add("hd");
-        set.add("eg");
-        set.forEach(System.out::println);
     }
 }
