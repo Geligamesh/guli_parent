@@ -9,8 +9,8 @@ aliyun:
   oss:
     file:
       endpoint: oss-cn-hangzhou.aliyuncs.com
-      keyid: LTAI4FpVmwjcqdvSo9Wj14QH
-      keysecret: Tjof9NtEDqiCeeWuYFdbmuE3lECuwR
+      keyid: LTAI4FpVmwjcqdvSo9fj14QH
+      keysecret: Tjof9NtEDqiCeewrYFdbmuE3lECuwR
       bucketname: my-images-bed
 server:
   port: 8002
