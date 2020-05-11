@@ -1,9 +1,13 @@
 package com.gxb.eduservice.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.gxb.commonutils.R;
+import com.gxb.eduservice.entity.chapter.ChapterVo;
+import com.gxb.eduservice.service.EduChapterService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
 
 /**
  * <p>
@@ -14,8 +18,17 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-05-04
  */
 @RestController
-@RequestMapping("/eduservice/edu-chapter")
+@RequestMapping("/eduservice/chapter")
+@CrossOrigin
 public class EduChapterController {
 
+    @Autowired
+    private EduChapterService eduChapterService;
+
+    @GetMapping("getChapterVideo/{courseId}")
+    public R getChapterVideo(@PathVariable("courseId") String courseId) {
+        List<ChapterVo> list = eduChapterService.getChapterVideoByCourseId(courseId);
+        return R.ok().data("data", list);
+    }
 }
 
